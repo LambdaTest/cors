@@ -1,9 +1,9 @@
 # CORS gin's middleware
 
-[![Run Tests](https://github.com/gin-contrib/cors/actions/workflows/go.yml/badge.svg)](https://github.com/gin-contrib/cors/actions/workflows/go.yml)
+[![Run Tests](https://github.com/LambdaTest/cors/actions/workflows/go.yml/badge.svg)](https://github.com/LambdaTest/cors/actions/workflows/go.yml)
 [![codecov](https://codecov.io/gh/gin-contrib/cors/branch/master/graph/badge.svg)](https://codecov.io/gh/gin-contrib/cors)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gin-contrib/cors)](https://goreportcard.com/report/github.com/gin-contrib/cors)
-[![GoDoc](https://godoc.org/github.com/gin-contrib/cors?status.svg)](https://godoc.org/github.com/gin-contrib/cors)
+[![Go Report Card](https://goreportcard.com/badge/github.com/LambdaTest/cors)](https://goreportcard.com/report/github.com/LambdaTest/cors)
+[![GoDoc](https://godoc.org/github.com/LambdaTest/cors?status.svg)](https://godoc.org/github.com/LambdaTest/cors)
 
 Gin middleware/handler to enable CORS support.
 
@@ -14,13 +14,13 @@ Gin middleware/handler to enable CORS support.
 Download and install it:
 
 ```sh
-go get github.com/gin-contrib/cors
+go get github.com/LambdaTest/cors
 ```
 
 Import it in your code:
 
 ```go
-import "github.com/gin-contrib/cors"
+import "github.com/LambdaTest/cors"
 ```
 
 ### Canonical example
@@ -31,8 +31,8 @@ package main
 import (
   "time"
 
-  "github.com/gin-contrib/cors"
-  "github.com/gin-gonic/gin"
+  "github.com/LambdaTest/cors"
+  "github.com/LambdaTest/gin"
 )
 
 func main() {

@@ -1,9 +1,9 @@
-module github.com/gin-contrib/cors
+module github.com/LambdaTest/cors
 
 go 1.18
 
 require (
-	github.com/gin-gonic/gin v1.9.1
+	github.com/LambdaTest/gin v1.9.1-vuln-fix
 	github.com/stretchr/testify v1.8.4
 )
 

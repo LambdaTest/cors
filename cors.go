@@ -3,6 +3,7 @@ package cors
 import (
 	"errors"
 	"fmt"
+	"regexp"
 	"strings"
 	"time"
 
@@ -103,8 +104,21 @@ func (c Config) getAllowedSchemas() []string {
 	return allowedSchemas
 }
 
+var regexpBasedOrigin = regexp.MustCompile(`^\/(.+)\/[gimuy]?$`)
+
 func (c Config) validateAllowedSchemas(origin string) bool {
 	allowedSchemas := c.getAllowedSchemas()
+
+	if regexpBasedOrigin.MatchString(origin) {
+		// Normalize regexp-based origins
+		origin = regexpBasedOrigin.FindStringSubmatch(origin)[1]
+		origin = strings.Replace(origin, "?", "", 1)
+
+		// Strip leading ^ anchor for schema validation
+		// The anchor is part of regex syntax, not the URL scheme
+		origin = strings.TrimPrefix(origin, "^")
+	}
+
 	for _, schema := range allowedSchemas {
 		if strings.HasPrefix(origin, schema) {
 			return true
